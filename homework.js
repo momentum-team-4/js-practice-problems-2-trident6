@@ -2,6 +2,23 @@
 // member of the array, and returns a new array with that member removed.
 // For example, `remove(['Cadence', 'Ordel', 'Marion'], 'Marion')` results
 // in `['Cadence', 'Ordel']`.
+
+remove(['Cadence', 'Ordel', 'Marion'], 'Marion')
+
+function  remove(names, nameToRemove) {
+    let filteredNames = []
+    for (let name of names) {
+        if (name !== nameToRemove) {
+            filteredNames.push(name)
+        }
+    }
+    return filteredNames
+}
+
+//let idx = names.indexOf('Marion');
+//names.splice(idx, 2);
+//names;
+//}
 //
 // If the potential member is not in the array, return the array unchanged.
 // If the potential member is in the array, remove all instances of it from the array.
@@ -11,9 +28,41 @@
 
 // 3. Create a function called "sum" that takes an array of numbers and
 // returns the sum of those numbers.
+/*
+numbers = [1, 2, 3, 4, 5];
+function sum(numbers) {
+    let sum = 0;
+    for (let num of numbers) {
+        sum += num;
+    }
+}
+let scores = [1, 2, 3, 4, 5];
+let sum = 0;
+for (let score of scores) {
+ sum += score;
+}
+*/
+        array = [1, 2, 3, 4, 5];
+       
+        sum = array.reduce(function(a, b){
+            return a + b;
+        }, 0);
+
+        /*
+        console.log(sum);
+*/
 
 // 4. Create a function called "average" that takes an array of numbers
 // and returns the average of those numbers.
+
+var array = [1, 2, 3, 4, 5];
+var avg = array.reduce(function(a, b){
+    return a + b / count(array);
+}, 0);
+
+console.log(avg);
+
+
 
 // 5. Create a function called "minimum" that takes an array of numbers and
 // returns the smallest number in that array.
